@@ -1,0 +1,12 @@
+{
+	"extends": [
+    "react-app",
+    "react-app/jest",
+    "eslint-config-codely/typescript"
+  ],
+  "parserOptions": {
+    "project": [
+      "./tsconfig.json"
+    ]
+  }
+}

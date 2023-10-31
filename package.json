@@ -10,7 +10,8 @@
     "dev:server": "cross-env NODE_ENV=development npm run build:server",
     "dev:remix": "remix dev --manual -c \"node --require ./build/server.js\"",
     "start": "cross-env NODE_ENV=production node --require ./build/server.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "@remix-run/css-bundle": "^2.1.0",
@@ -34,7 +35,9 @@
     "@types/react-dom": "^18.2.7",
     "@types/source-map-support": "^0.5.9",
     "esbuild": "^0.19.5",
-    "eslint": "^8.38.0",
+    "eslint": "^8.52.0",
+    "eslint-config-codely": "^2.1.3",
+    "eslint-config-react-app": "^7.0.1",
     "typescript": "^5.1.6"
   },
   "engines": {
