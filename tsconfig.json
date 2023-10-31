@@ -1,8 +1,11 @@
 {
   "include": [
     "remix.env.d.ts", 
-    "app/**/*.ts", 
-    "app/**/*.tsx"
+    "app",
+    "tests",
+    "e2e",
+    "jest.config.js",
+    "cypress.config.ts"
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],

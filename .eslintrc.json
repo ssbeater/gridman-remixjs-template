@@ -1,12 +1,59 @@
 {
-	"extends": [
-    "react-app",
-    "react-app/jest",
-    "eslint-config-codely/typescript"
-  ],
+  "extends": ["react-app", "react-app/jest", "eslint-config-codely/typescript"],
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
+    "project": ["./tsconfig.json"]
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "no-console": "off",
+    "@typescript-eslint/no-floating-promises": 0,
+    "react/jsx-key": "error",
+    "@typescript-eslint/no-misused-promises": [
+      2,
+      {
+        "checksVoidReturn": {
+          "attributes": false
+        }
+      }
     ]
-  }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/e2e/**/*.spec.ts"
+      ],
+      "rules": {
+        "testing-library/await-async-query": 0,
+        "@typescript-eslint/no-unsafe-member-access": 0,
+        "@typescript-eslint/no-unsafe-call": 0,
+        "testing-library/prefer-screen-queries": 0
+      }
+    },
+    {
+      "files": [
+        "**/*.test.ts",
+        "**/*.test.tsx"
+      ],
+      "rules": {
+        "@typescript-eslint/unbound-method": "off"
+      }
+    }
+  ]
 }
