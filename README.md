@@ -1,38 +1,53 @@
-# Welcome to Remix!
 
-- [Remix Docs](https://remix.run/docs)
+<h1 align="center">
+  Remix JS Template by Gridman
+</h1>
 
-## Development
+<p align="center">
+  Template for RemixJS-Express app server with TypeScript, including: Unit and end-to-end tests and linting.
+  <br />
+  <a href="https://github.com/ssbeater/gridman-remixjs-template">GitHub Repository</a>
+</p>
 
-From your terminal:
+## Using this Remix template
 
-```sh
-npm run dev
-```
+1. Create your project based on this template:
+   - Clone the template, go to GitHub repository and click "Use this template" button to create your newly repository
+   - You can use [degit](https://github.com/Rich-Harris/degit) for create a local project:
+     ```bash
+     npx degit ssbeater/gridman-remixjs-template#main my-app
+     ```
+2. Update your project meta-information:
+   -  Update the `package.json`:
+   - Update `name`, `author` and `license` properties
+   - Change the title in `app/root.tsx`
+   - Replace the favicon in the `public` directory
+3. Runnig app:
+   - `cd my-app`: Move to your project root directory
+   - `npm install`: Install all the project dependencies
+   - `npm start`: Start the development (using [localhost:3000](http://localhost:3000) by default)
 
-This starts your app in development mode, rebuilding assets on file changes.
+## Testing
 
-## Deployment
+### Unit tests
 
-First, build your app for production:
+`npm run test`: Run unit tests with Jest and React Testing Library
 
-```sh
-npm run build
-```
+### End-to-end tests
 
-Then run the app in production mode:
+1. `npm start`: Start the development server on [localhost:3000](http://localhost:3000)
+2. Run end-to-end tests with Cypress choosing one of the following options:
+  - `npm run cy:open`: Open Cypress in dev mode
+  - `npm run cy:run`: Execute Cypress in CLI
 
-```sh
-npm start
-```
+## Linting
 
-Now you'll need to pick a host to deploy it to.
+- `npm run lint`: Run linter
+- `npm run lint:fix`: Fix lint issues
 
-### DIY
+## Tech Stack
 
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+- [TypeScript](https://www.typescriptlang.org)
+- [ESLint](https://eslint.org) and [Prettier](https://prettier.io) by [CodelyTV Eslint Config](https://github.com/CodelyTV/eslint-config-codely)
+- [Jest](https://jestjs.io) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) -> Tests
+- [Cypress](https://www.cypress.io) and [Testing Library](https://testing-library.com/docs/cypress-testing-library) -> E2E tests

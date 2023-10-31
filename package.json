@@ -11,7 +11,9 @@
     "dev:remix": "remix dev --manual -c \"node --require ./build/server.js\"",
     "start": "cross-env NODE_ENV=production node --require ./build/server.js",
     "typecheck": "tsc",
-    "lint": "eslint --ignore-path .gitignore ."
+    "test": "jest --watchAll --config=jest.config.js",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "@remix-run/css-bundle": "^2.1.0",
