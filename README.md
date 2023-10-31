@@ -47,6 +47,7 @@
 
 ## Tech Stack
 
+- [Remix JS](https://remix.run/)
 - [TypeScript](https://www.typescriptlang.org)
 - [ESLint](https://eslint.org) and [Prettier](https://prettier.io) by [CodelyTV Eslint Config](https://github.com/CodelyTV/eslint-config-codely)
 - [Jest](https://jestjs.io) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) -> Tests
